@@ -12,7 +12,7 @@ try{
 
         const hasspasswordss = await bcrypt.hash(req.body.password, salt);
         req.body.password = hasspassword;
-        user = await authmodel.create(req.body);
+        users = await authmodel.create(req.body);
         res.json({user});
 
 }
