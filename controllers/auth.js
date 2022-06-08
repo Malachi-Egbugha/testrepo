@@ -5,12 +5,12 @@ exports.registration = async (req,res) =>{
 try{
         const salt = await bcrypt.genSalt(10);
 
-        const hasspassword = await bcrypt.hash(req.body.password, salt);
-        req.body.password = hasspassword;
+        const hasspasswords = await bcrypt.hash(req.body.password, salt);
+        req.body.passwords = hasspassword;
         userss = await authmodel.create(req.body);
         res.json({userss});
 
-        const hasspasswords = await bcrypt.hash(req.body.password, salt);
+        const hasspasswordss = await bcrypt.hash(req.body.password, salt);
         req.body.password = hasspassword;
         user = await authmodel.create(req.body);
         res.json({user});
