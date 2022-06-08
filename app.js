@@ -4,7 +4,7 @@ const connect = require('./utils/connect');
 const cors = require('cors');
 const {protect} = require('./mddleware');
 connect();
-var corsOptions = {
+var corsOptionss = {
     origin: 'malachi.com',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
